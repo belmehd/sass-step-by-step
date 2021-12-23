@@ -1,0 +1,36 @@
+1- installer node.js "https://nodejs.org/en/" (version LTS)
+
+2- ouvrir emplacement du fichier (node.js) et faire shift + clic droit, ouvrir le powershell
+
+3- taper "node -v" dans le powershell pour vérifier que node est bien installé et voir la version dont on dispose
+
+4- installer le module node-sass "https://www.npmjs.com/package/node-sass" (possibilité d'avoir besoin de plus d'explications, en cas de problème 
+	je conseille de ramener le dépot github en local *lien présent sur le site* )
+
+5- créer son dossier/projet puis initialiser son projet dans vs code via son terminal en tapant "npm init -y" (-y permet de remplir le fichier .json par défault, peut être omit mais dans
+	ce cas il faudrat configurer le fichier étape par étape dans le terminal)
+
+6- taper la commande "npm install node-sass" dans le terminal vs code
+
+7- interchanger les étapes 4,5 et 6 en cas de problèmes 
+
+8- créer un fichier "index.html" puis un dossier "dist" dans lequel je créer 1 fichier "img" et 1 dossier "css" dans lequel je créer un fichier "style.css" 
+	enfin créer un dossier "scss" dans lequel créer un fichier main.scss
+
+8.5- ne pas oublier de relier le fichier index.html au style.css grace à la balise <link rel="stylesheet" href="./dist/css/style.css">
+
+9- liste des commandes node-sass ici : "https://github.com/sass/node-sass" (scroller jusqu'à la section intitulé "Command Line Interface")
+
+10- dans le fichier package.json intégrer les commandes dans les accolades de "scripts" : "compile": "node-sass scss/main.scss dist/css/style.css" (rend possible la compilation scss/css)
+									                  "watch": "node-sass scss/main.scss dist/css/style.css -w" (rend possible la surveillance au changement du fichier main.scss)
+											  "compressed": "node-sass scss/main.scss dist/css/style.css -w --output-style=compressed" (rend possible la compretion du fichier style.css)
+
+11- taper les commandes dans le terminal vs code : npm run compile (compile le scss/css)
+						   npm run watch (surveille les changements du fichier main.scss et les applique)
+						   npm run compressed (compresse tous les régles css rendant sa lecture plus rapide par le robot du navigateur)
+
+
+
+
+
+source : getCodingKnowledge (youtube)
